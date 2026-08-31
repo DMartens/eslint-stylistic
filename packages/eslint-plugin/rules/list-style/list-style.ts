@@ -60,7 +60,7 @@ export default createRule<RuleOptions, MessageIds>({
                 enum: ['ignore', 'always', 'never'],
               },
               singleLine: { $ref: '#/items/0/$defs/singleLineConfig' },
-              multiline: { $ref: '#/items/0/$defs/multiLineConfig' },
+              multiLine: { $ref: '#/items/0/$defs/multiLineConfig' },
             },
           },
           overrideConfig: {
