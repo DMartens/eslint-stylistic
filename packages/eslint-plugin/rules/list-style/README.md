@@ -19,7 +19,7 @@ Enforce consistent spacing and line break styles inside brackets.
 
 This rule requires or disallows a line break between object/array/named imports/exports and function parameters and other similar structures.
 
-It check the newline style of the first property or item and apply the same style to the rest of the properties or items. This allows you to easily wrap or unwrap your code consistently.
+It checks the newline style of the first property or item and applies the same style to the rest of the properties or items. This allows you to easily wrap or unwrap your code consistently.
 
 ## Options
 
@@ -206,7 +206,7 @@ Examples of **correct** code with the default `"ignore"` option:
 ::: correct
 
 ```ts
-/* eslint @stylistic/exp-list-style: ["error", { "empty": "ignore" }] */
+/* eslint @stylistic/list-style: ["error", { "empty": "ignore" }] */
 
 const array = [ ]
 const object = {}
@@ -220,7 +220,7 @@ Examples of **correct** code with the `"always"` option:
 ::: correct
 
 ```ts
-/* eslint @stylistic/exp-list-style: ["error", { "empty": "always" }] */
+/* eslint @stylistic/list-style: ["error", { "empty": "always" }] */
 
 const array = [ ]
 const object = { }
@@ -234,7 +234,7 @@ Examples of **incorrect** code with the `"never"` option and `multiLine.minItems
 ::: incorrect
 
 ```ts
-/* eslint @stylistic/exp-list-style: ["error", { "empty": "never", "multiLine": { "minItems": 1 } }] */
+/* eslint @stylistic/list-style: ["error", { "empty": "never", "multiLine": { "minItems": 1 } }] */
 
 const array = [ ]
 const object = {
@@ -249,7 +249,7 @@ Examples of **correct** code with the `"never"` option and `multiLine.minItems` 
 ::: correct
 
 ```ts
-/* eslint @stylistic/exp-list-style: ["error", { "empty": "never", "multiLine": { "minItems": 1 } }] */
+/* eslint @stylistic/list-style: ["error", { "empty": "never", "multiLine": { "minItems": 1 } }] */
 
 const array = []
 const object = {}
@@ -284,28 +284,28 @@ let [b] = bar;
 
 You can also specify different options for various node types:
 
-- `ArrayExpression`: arrays expressions
+- `ArrayExpression`: array expressions
 - `ArrayPattern`: array patterns of destructuring assignments
-- `ArrowFunctionExpression`: parameters of arrow function declarations
-- `CallExpression`: parameters of call expressions
+- `ArrowFunctionExpression`: parameters of arrow function expressions
+- `CallExpression`: arguments of call expressions
 - `ExportNamedDeclaration`: named exports
 - `FunctionDeclaration`: parameters of function declarations
 - `FunctionExpression`: parameters of function expressions
 - `IfStatement`: condition of if statements
 - `ImportDeclaration`: named imports
 - `ImportAttributes`: import attributes
-- `NewExpression`: parameters of new expressions
+- `NewExpression`: arguments of new expressions
 - `ObjectExpression`: object literals
 - `ObjectPattern`: object patterns of destructuring assignments
-- `TSDeclareFunction`: parameters of function type declarations
-- `TSFunctionType`: parameters of arrow function type declarations
-- `TSInterfaceBody`: interfaces declarations
+- `TSDeclareFunction`: parameters of ambient function declarations and overload signatures
+- `TSFunctionType`: parameters of TypeScript function types
+- `TSInterfaceBody`: interface declarations
 - `TSEnumBody`: enum declarations
 - `TSTupleType`: tuple types
 - `TSTypeLiteral`: type literals
 - `TSTypeParameterDeclaration`: type parameter declarations
 - `TSTypeParameterInstantiation`: type parameter instantiations
-- `JSONArrayExpression`: arrays expressions in JSON files
+- `JSONArrayExpression`: array expressions in JSON files
 - `JSONObjectExpression`: object literals in JSON files
 
 Example of node-specific override:
